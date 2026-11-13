@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/Ninoralf/openparty:latest
+          tags: ghcr.io/ninoralf/openparty:latest
