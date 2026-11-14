@@ -89,7 +89,7 @@ class Account {
         };
 
         const simpleOverwriteKeys = [
-            'profileId', 'userId', 'username', 'nickname', 'name', 'email', 'password',
+            'profileId', 'userId', 'username', 'nickname', 'name', 'email', 'password', 'ticket',
             'avatar', 'country', 'platformId', 'alias', 'aliasGender', 'jdPoints',
             'portraitBorder', 'rank', 'skin', 'diamondPoints', 'wdfRank', 'stars',
             'unlocks', 'language', 'firstPartyEnv'

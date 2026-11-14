@@ -404,21 +404,51 @@ class AccountRouteHandler extends RouteHandler {
             profileId = await AccountService.findUserFromTicket(ticket);
         }
 
+        const UbiservicesRouteHandler = require('./UbiservicesRouteHandler');
+        if (!profileId && ticket) {
+            const rawTicket = ticket.startsWith('Ubi_v1 ') ? ticket.substring(7) : ticket;
+            if (UbiservicesRouteHandler.cachedTicket[ticket]) {
+                profileId = UbiservicesRouteHandler.cachedTicket[ticket];
+            } else if (UbiservicesRouteHandler.cachedTicket[rawTicket]) {
+                profileId = UbiservicesRouteHandler.cachedTicket[rawTicket];
+            }
+        }
+
         if (!profileId) {
-            this.logger.warn(`POST /profile/v2/profiles: Profile not found for provided ticket.`);
-            return res.status(400).send({ message: "Profile not found for provided ticket." });
+            const clientIp = require('../../lib/ipResolver').getClientIp(req);
+            if (UbiservicesRouteHandler.ipCache[clientIp]) {
+                profileId = UbiservicesRouteHandler.ipCache[clientIp].profileId;
+            }
+        }
+
+        if (!profileId) {
+            const allAccounts = await AccountService.getAllAccounts();
+            const keys = Object.keys(allAccounts);
+            if (keys.length > 0) {
+                profileId = keys[0];
+            } else {
+                profileId = uuidv4();
+            }
         }
 
         let userData = await AccountService.getUserData(profileId);
+        const defaults = UbiservicesRouteHandler.getDefaultUserUnlocks();
 
         if (userData) {
             this.logger.info(`Updating existing profile ${profileId}`);
             
-            // Update only the fields present in the request body, preserving other fields
-            // Ensure the ticket is updated if present in the header
             const updateData = { ...req.body };
-            const hashedTicket = crypto.createHash('sha256').update(ticket).digest('hex');
-            updateData.ticket = hashedTicket; // Always update ticket from header
+            if (ticket) {
+                const hashedTicket = crypto.createHash('sha256').update(ticket).digest('hex');
+                updateData.ticket = hashedTicket;
+            }
+            if (!userData.avatar && !updateData.avatar) updateData.avatar = defaults.avatar;
+            if ((!userData.unlockedAvatars || userData.unlockedAvatars.length === 0) && !updateData.unlockedAvatars) {
+                updateData.unlockedAvatars = defaults.unlockedAvatars;
+            }
+            if ((!userData.unlockedSkins || userData.unlockedSkins.length === 0) && !updateData.unlockedSkins) {
+                updateData.unlockedSkins = defaults.unlockedSkins;
+            }
             const updatedProfile = await AccountService.updateUser(profileId, updateData);
             
             return res.send({
@@ -426,11 +456,25 @@ class AccountRouteHandler extends RouteHandler {
                 ...updatedProfile.toPublicJSON()
             });
         } else {
-            // This case should ideally not be reached if profileId is always found via ticket
-            // However, if it is, it means a ticket was provided but no profile exists for it.
-            // As per previous instruction, we should not create a new profile here.
-            this.logger.error(`POST /profile/v2/profiles: Unexpected state - profileId found via ticket but no existing user data.`);
-            return res.status(400).send({ message: "Profile not found for provided ticket." });
+            this.logger.info(`Creating missing profile ${profileId} from POST /profile/v2/profiles`);
+            const updateData = {
+                username: "Ninoralf",
+                nickname: "Ninoralf",
+                name: "Ninoralf",
+                userId: profileId,
+                country: 'US',
+                platformId: 'pc',
+                ...defaults,
+                ...req.body
+            };
+            if (ticket) {
+                updateData.ticket = crypto.createHash('sha256').update(ticket).digest('hex');
+            }
+            const createdProfile = await AccountService.updateUser(profileId, updateData);
+            return res.send({
+                __class: "UserProfile",
+                ...createdProfile.toPublicJSON()
+            });
         }
     }
 
@@ -440,6 +484,8 @@ class AccountRouteHandler extends RouteHandler {
      * @param {Response} res - The response object
      */
     async handleGetProfiles(req, res) {
+        const UbiservicesRouteHandler = require('./UbiservicesRouteHandler');
+        const defaults = UbiservicesRouteHandler.getDefaultUserUnlocks();
         const profileIdsParam = req.query.profileIds;
 
         if (profileIdsParam) {
@@ -448,16 +494,35 @@ class AccountRouteHandler extends RouteHandler {
                 const profiles = [];
 
                 for (const reqProfileId of requestedProfileIds) {
-                    const profile = await AccountService.getUserData(reqProfileId);
+                    let profile = await AccountService.getUserData(reqProfileId);
+                    if (!profile) {
+                        this.logger.info(`Profile ${reqProfileId} not found, auto-provisioning with defaults`);
+                        profile = await AccountService.updateUser(reqProfileId, {
+                            username: "Ninoralf",
+                            nickname: "Ninoralf",
+                            name: "Ninoralf",
+                            userId: reqProfileId,
+                            country: 'US',
+                            platformId: 'pc',
+                            ...defaults
+                        });
+                    } else if (!profile.avatar || !profile.unlockedAvatars || profile.unlockedAvatars.length === 0) {
+                        profile = await AccountService.updateUser(reqProfileId, {
+                            avatar: profile.avatar || defaults.avatar,
+                            skin: profile.skin || defaults.skin,
+                            alias: profile.alias || defaults.alias,
+                            portraitBorder: profile.portraitBorder || defaults.portraitBorder,
+                            unlockedAvatars: defaults.unlockedAvatars,
+                            unlockedSkins: defaults.unlockedSkins,
+                            unlockedAliases: defaults.unlockedAliases,
+                            unlockedPortraitBorders: defaults.unlockedPortraitBorders
+                        });
+                    }
+
                     if (profile) {
                         profiles.push({
                             __class: "UserProfile",
                             ...profile.toPublicJSON()
-                        });
-                    } else {
-                        profiles.push({
-                            profileId: reqProfileId,
-                            isExisting: false
                         });
                     }
                 }
@@ -469,17 +534,45 @@ class AccountRouteHandler extends RouteHandler {
         }
 
         // Fallback for single profile request or if profileIds is not present
-        const profileId = req.query.profileId || await this.findUserFromTicket(req.header('Authorization'));
-
+        let profileId = req.query.profileId;
         if (!profileId) {
-            return res.status(400).send({ message: "Missing profileId" });
+            profileId = await this.findUserFromTicket(req.header('Authorization'));
+        }
+        if (!profileId) {
+            const clientIp = require('../../lib/ipResolver').getClientIp(req);
+            if (UbiservicesRouteHandler.ipCache[clientIp]) {
+                profileId = UbiservicesRouteHandler.ipCache[clientIp].profileId;
+            }
+        }
+        if (!profileId) {
+            const allAccounts = await AccountService.getAllAccounts();
+            const keys = Object.keys(allAccounts);
+            if (keys.length > 0) profileId = keys[0];
+            else profileId = uuidv4();
         }
 
-        const userProfile = await AccountService.getUserData(profileId);
-
+        let userProfile = await AccountService.getUserData(profileId);
         if (!userProfile) {
-            this.logger.info(`Profile ${profileId} not found`);
-            return res.status(404).send({ message: "Profile not found" });
+            userProfile = await AccountService.updateUser(profileId, {
+                username: "Ninoralf",
+                nickname: "Ninoralf",
+                name: "Ninoralf",
+                userId: profileId,
+                country: 'US',
+                platformId: 'pc',
+                ...defaults
+            });
+        } else if (!userProfile.avatar || !userProfile.unlockedAvatars || userProfile.unlockedAvatars.length === 0) {
+            userProfile = await AccountService.updateUser(profileId, {
+                avatar: userProfile.avatar || defaults.avatar,
+                skin: userProfile.skin || defaults.skin,
+                alias: userProfile.alias || defaults.alias,
+                portraitBorder: userProfile.portraitBorder || defaults.portraitBorder,
+                unlockedAvatars: defaults.unlockedAvatars,
+                unlockedSkins: defaults.unlockedSkins,
+                unlockedAliases: defaults.unlockedAliases,
+                unlockedPortraitBorders: defaults.unlockedPortraitBorders
+            });
         }
 
         return res.send({

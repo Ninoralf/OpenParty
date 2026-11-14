@@ -136,6 +136,8 @@ class UbiservicesRouteHandler extends RouteHandler {
             const defaults = this.getDefaultUserUnlocks();
             const decodedUsername = this.atob(username);
 
+            this.cachedTicket[ticket] = profileId;
+
             if (userData && userData.password && userData.email && userData.password === password) {
                 console.log("[ACC] CustomAuth login: ", decodedUsername);
                 const updates = {
@@ -165,6 +167,7 @@ class UbiservicesRouteHandler extends RouteHandler {
                 }
                 await AccountService.updateUser(profileId, updates);
                 const sessionData = this.generateSessionData(profileId, decodedUsername, clientIp, clientIpCountry, ticket);
+                this.ipCache[clientIp] = sessionData;
                 res.send(sessionData);
                 return;
             } else if (!userData || !userData.password || !userData.email) {
@@ -181,7 +184,9 @@ class UbiservicesRouteHandler extends RouteHandler {
                     platformId: 'pc',
                     ...defaults
                 });
-                res.send(this.generateSessionData(profileId, decodedUsername, clientIp, clientIpCountry, ticket));
+                const sessionData = this.generateSessionData(profileId, decodedUsername, clientIp, clientIpCountry, ticket);
+                this.ipCache[clientIp] = sessionData;
+                res.send(sessionData);
                 return;
             } else {
                 console.log("[ACC] CustomAuth login, Invalid Credentials: ", decodedUsername);
@@ -219,9 +224,9 @@ class UbiservicesRouteHandler extends RouteHandler {
 
             const defaults = this.getDefaultUserUnlocks();
             await AccountService.updateUser(profileId, {
-                username: "Dancer",
-                nickname: "Dancer",
-                name: "Dancer",
+                username: "Ninoralf",
+                nickname: "Ninoralf",
+                name: "Ninoralf",
                 userId: profileId,
                 ticket: `Ubi_v1 ${userTicket}`,
                 country: clientIpCountry || 'US',
@@ -229,7 +234,7 @@ class UbiservicesRouteHandler extends RouteHandler {
                 ...defaults
             });
 
-            const fakeSession = this.generateSessionData(profileId, "Dancer", clientIp, clientIpCountry, userTicket);
+            const fakeSession = this.generateSessionData(profileId, "Ninoralf", clientIp, clientIpCountry, userTicket);
             this.ipCache[clientIp] = fakeSession; // Cache the fake session for this IP
 
             res.send(fakeSession);
@@ -488,23 +493,30 @@ class UbiservicesRouteHandler extends RouteHandler {
             return null;
         }
 
-        const parts = decoded.split(":");
-        // Ensure we have enough parts for the expected structure
-        if (parts.length < 6) {
-            console.error("Custom auth header has too few parts:", decoded);
-            return null;
+        const parts = decoded ? decoded.split(":") : [];
+        if (parts.length >= 6 && parts[0] === "JDParty") {
+            const [tag, encodedProfileId, profileId, username, email, encodedPassword] = parts;
+            return {
+                profileId,
+                username,
+                email,
+                password: this.atob(encodedPassword),
+            };
         }
 
-        const [tag, encodedProfileId, profileId, username, email, encodedPassword] = parts;
+        // Support fallback UUID tickets (e.g. Guest ticket)
+        const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+        if (uuidRegex.test(decoded) || uuidRegex.test(encodedPart)) {
+            const guestUuid = uuidRegex.test(decoded) ? decoded : encodedPart;
+            return {
+                profileId: guestUuid,
+                username: Buffer.from("Ninoralf").toString("base64"),
+                email: "user332630@jdparty.xyz",
+                password: "password",
+            };
+        }
 
-        if (tag !== "JDParty") return null;
-
-        return {
-            profileId,
-            username,
-            email,
-            password: this.atob(encodedPassword),
-        };
+        return null;
     }
 
     /**

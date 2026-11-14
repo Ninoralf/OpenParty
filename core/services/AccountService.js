@@ -46,6 +46,19 @@ class AccountService {
             if (account) return account.profileId;
         }
 
+        try {
+            const UbiservicesRouteHandler = require('../classes/routes/UbiservicesRouteHandler');
+            if (UbiservicesRouteHandler && UbiservicesRouteHandler.cachedTicket) {
+                for (const cand of [rawTicket, ticket]) {
+                    if (UbiservicesRouteHandler.cachedTicket[cand]) {
+                        return UbiservicesRouteHandler.cachedTicket[cand];
+                    }
+                }
+            }
+        } catch (e) {
+            // Ignore circular dependency issues if any
+        }
+
         return null;
     }
 
