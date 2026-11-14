@@ -27,30 +27,22 @@ class CarouselRouteHandler extends RouteHandler {
         this.logger.info(`Initializing routes...`);
 
         // Carousel routes
-        this.registerPost(app, "/carousel/v2/pages/avatars", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/avatars", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/avatars-creation", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/avatars-creation", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/friend-dancerprofile", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/friend-dancerprofile", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/quests", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/quests", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/create-playlist", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/create-playlist", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/skins", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/skins", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/skins-creation", this.handleCarousel);
-        this.registerGet(app, "/carousel/v2/pages/skins-creation", this.handleCarousel);
+        const pages = [
+            'avatars', 'avatars-creation', 'dancerprofile', 'friend-dancerprofile',
+            'jdtv', 'jdtv-nx', 'quests', 'create-playlist', 'skins', 'skins-creation'
+        ];
+        for (const p of pages) {
+            this.registerPost(app, `/carousel/v2/pages/${p}`, this.handleCarousel);
+            this.registerGet(app, `/carousel/v2/pages/${p}`, this.handleCarousel);
+            this.registerPost(app, `/carousel/:version/pages/${p}`, this.handleCarousel);
+            this.registerGet(app, `/carousel/:version/pages/${p}`, this.handleCarousel);
+            this.registerPost(app, `/${p}`, this.handleCarousel);
+            this.registerGet(app, `/${p}`, this.handleCarousel);
+        }
         this.registerPost(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
         this.registerGet(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
-        this.registerPost(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
-        this.registerGet(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
+        this.registerPost(app, "/carousel/:version/pages/:mode", this.handleCarouselPages);
+        this.registerGet(app, "/carousel/:version/pages/:mode", this.handleCarouselPages);
 
         this.logger.info(`Routes initialized`);
     }
@@ -61,7 +53,7 @@ class CarouselRouteHandler extends RouteHandler {
      * @param {Response} res - The response object
      */
     handleCarousel(req, res) {
-        const path = req.path.split('/').pop();
+        const path = req.path.split('?')[0].split('/').filter(Boolean).pop();
         this.logger.info(`Serving carousel page: ${path}`);
         switch (path) {
             case 'avatars':

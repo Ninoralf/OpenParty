@@ -28,6 +28,7 @@ class Account {
         this.songsPlayed = data.songsPlayed || []; // Array of map names
         this.progression = data.progression || {};
         this.history = data.history || {}; // Example: {"MapName": playCount}
+        this.isExisting = data.isExisting !== undefined ? data.isExisting : true;
 
         // New fields from extended JSON structures (assuming these were added from previous step)
         this.skin = data.skin || null;
@@ -92,7 +93,7 @@ class Account {
             'profileId', 'userId', 'username', 'nickname', 'name', 'email', 'password', 'ticket',
             'avatar', 'country', 'platformId', 'alias', 'aliasGender', 'jdPoints',
             'portraitBorder', 'rank', 'skin', 'diamondPoints', 'wdfRank', 'stars',
-            'unlocks', 'language', 'firstPartyEnv'
+            'unlocks', 'language', 'firstPartyEnv', 'isExisting'
         ];
 
         const deepMergeObjectKeys = [
@@ -225,6 +226,7 @@ class Account {
         delete publicData.email;
         delete publicData.password;
         delete publicData.ticket;
+        publicData.isExisting = true;
         return publicData;
     }
 }

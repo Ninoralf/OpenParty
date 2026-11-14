@@ -58,6 +58,23 @@ const main = {
 
 main.songdb = songdb.generateSonglist();
 
+if (main.items) {
+  if (main.items.avatars) {
+    for (const [id, item] of Object.entries(main.items.avatars)) {
+      if (item && item.Id === undefined) {
+        item.Id = parseInt(id, 10);
+      }
+    }
+  }
+  if (main.items.skins) {
+    for (const [id, item] of Object.entries(main.items.skins)) {
+      if (item && item.Id === undefined) {
+        item.Id = parseInt(id, 10);
+      }
+    }
+  }
+}
+
 module.exports = {
   main
 }

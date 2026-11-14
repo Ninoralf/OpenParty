@@ -522,7 +522,12 @@ class AccountRouteHandler extends RouteHandler {
                     if (profile) {
                         profiles.push({
                             __class: "UserProfile",
-                            ...profile.toPublicJSON()
+                            isExisting: true,
+                            ...profile.toPublicJSON(),
+                            name: profile.name || profile.nickname || "Ninoralf",
+                            nickname: profile.nickname || profile.name || "Ninoralf",
+                            avatar: profile.avatar || 512,
+                            skin: profile.skin || 1
                         });
                     }
                 }
@@ -577,7 +582,12 @@ class AccountRouteHandler extends RouteHandler {
 
         return res.send({
             __class: "UserProfile",
-            ...userProfile.toPublicJSON()
+            isExisting: true,
+            ...userProfile.toPublicJSON(),
+            name: userProfile.name || userProfile.nickname || "Ninoralf",
+            nickname: userProfile.nickname || userProfile.name || "Ninoralf",
+            avatar: userProfile.avatar || 512,
+            skin: userProfile.skin || 1
         });
     }
 
@@ -682,7 +692,7 @@ class AccountRouteHandler extends RouteHandler {
      */
     async handleDeleteFavoriteMap(req, res) {
         const mapName = req.params.MapName;
-        const profileId = req.query.profileId || this.findUserFromTicket(req.header('Authorization'));
+        const profileId = req.query.profileId || await this.findUserFromTicket(req.header('Authorization'));
         
         if (!profileId) {
             return res.status(400).send({ message: "Missing profileId" });
@@ -692,7 +702,7 @@ class AccountRouteHandler extends RouteHandler {
             return res.status(400).send({ message: "Missing mapName" });
         }
         
-        AccountService.removeMapFromFavorites(profileId, mapName);
+        await AccountService.removeMapFromFavorites(profileId, mapName);
         
         return res.status(204).send();
     }
@@ -703,22 +713,56 @@ class AccountRouteHandler extends RouteHandler {
      * @param {Response} res - The response object
      */
     async handleGetProfileSessions(req, res) {
-        const profileId = req.query.profileId || this.findUserFromTicket(req.header('Authorization'));
+        const authHeader = req.header('Authorization');
+        let profileId = req.query.profileId;
+        if (!profileId && authHeader) {
+            profileId = await this.findUserFromTicket(authHeader);
+        }
+
+        const UbiservicesRouteHandler = require('./UbiservicesRouteHandler');
+        if (!profileId && authHeader) {
+            const rawTicket = authHeader.startsWith('Ubi_v1 ') ? authHeader.substring(7) : authHeader;
+            if (UbiservicesRouteHandler.cachedTicket[authHeader]) {
+                profileId = UbiservicesRouteHandler.cachedTicket[authHeader];
+            } else if (UbiservicesRouteHandler.cachedTicket[rawTicket]) {
+                profileId = UbiservicesRouteHandler.cachedTicket[rawTicket];
+            }
+        }
+
+        const clientIp = require('../../lib/ipResolver').getClientIp(req);
+        if (!profileId && UbiservicesRouteHandler.ipCache[clientIp]) {
+            profileId = UbiservicesRouteHandler.ipCache[clientIp].profileId;
+        }
+
+        if (!profileId) {
+            const allAccounts = await AccountService.getAllAccounts();
+            const keys = Object.keys(allAccounts);
+            if (keys.length > 0) {
+                profileId = keys[0];
+            }
+        }
         
         if (!profileId) {
             return res.status(400).send({ message: "Missing profileId" });
         }
         
-        const userProfile = AccountService.getUserData(profileId);
+        let userProfile = await AccountService.getUserData(profileId);
         
         if (!userProfile) {
-            this.logger.info(`Profile ${profileId} not found`);
-            return res.status(404).send({ message: "Profile not found" });
+            this.logger.info(`Profile ${profileId} not found, auto-provisioning`);
+            const defaults = UbiservicesRouteHandler.getDefaultUserUnlocks();
+            userProfile = await AccountService.updateUser(profileId, {
+                username: "Ninoralf",
+                nickname: "Ninoralf",
+                name: "Ninoralf",
+                userId: profileId,
+                country: 'US',
+                platformId: 'pc',
+                ...defaults
+            });
         }
         
-        const clientIp = req.ip; // Get client IP
-        const authHeader = req.header('Authorization');
-        const ticket = authHeader ? authHeader.split(' ')[1] : null; // Extract ticket from "Ubi_v1 <ticket>"
+        const ticket = authHeader ? (authHeader.startsWith('Ubi_v1 ') ? authHeader.substring(7) : authHeader) : null;
 
         // Determine platformType from X-SkuId
         const skuId = req.header('X-SkuId') || '';
@@ -740,17 +784,17 @@ class AccountRouteHandler extends RouteHandler {
             platformType: platformType,
             ticket: ticket,
             twoFactorAuthenticationTicket: null,
-            profileId: userProfile.profileId,
-            userId: userProfile.userId, // Assuming userId is stored in Account model
-            nameOnPlatform: userProfile.name || userProfile.nickname,
-            environment: "Prod", // Static for now
+            profileId: userProfile.profileId || profileId,
+            userId: userProfile.userId || userProfile.profileId || profileId,
+            nameOnPlatform: userProfile.name || userProfile.nickname || "Ninoralf",
+            environment: "Prod",
             expiration: expiration,
-            spaceId: "cd052712-ba1d-453a-89b9-08778888d380", // Static from example
+            spaceId: "cd052712-ba1d-453a-89b9-08778888d380",
             clientIp: clientIp,
-            clientIpCountry: "US", // Static for now, requires IP lookup for dynamic
+            clientIpCountry: "US",
             serverTime: serverTime,
-            sessionId: userProfile.profileId, // Keeping profileId as sessionId as per current implementation
-            sessionKey: "KJNTFMD24XOPTmpgGU3MXPuhAx3IMYSYG4YgyhPJ8rVkQDHzK1MmiOtHKrQiyL/HCOsJNCfX63oRAsyGe9CDiQ==", // Placeholder
+            sessionId: userProfile.profileId || profileId,
+            sessionKey: "KJNTFMD24XOPTmpgGU3MXPuhAx3IMYSYG4YgyhPJ8rVkQDHzK1MmiOtHKrQiyL/HCOsJNCfX63oRAsyGe9CDiQ==",
             rememberMeTicket: null
         });
     }
@@ -760,9 +804,9 @@ class AccountRouteHandler extends RouteHandler {
      * @param {Request} req - The request object
      * @param {Response} res - The response object
      */
-    handleFilterPlayers(req, res) {
+    async handleFilterPlayers(req, res) {
         const { count, countryFilter, platform } = req.body;
-        const allAccounts = AccountService.getAllAccounts();
+        const allAccounts = await AccountService.getAllAccounts();
         
         // Filter accounts based on criteria
         const filteredAccounts = Object.values(allAccounts)

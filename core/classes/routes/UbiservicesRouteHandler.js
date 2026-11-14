@@ -69,6 +69,9 @@ class UbiservicesRouteHandler extends RouteHandler {
 
         // Retrieve profiles based on query parameters
         this.registerGet(app, '/v3/profiles', this.handleGetProfiles);
+        this.registerGet(app, '/v2/profiles', this.handleGetProfiles);
+        this.registerGet(app, '/:version/spaces/:spaceId/items', (req, res) => res.send({ items: [] }));
+        this.registerGet(app, '/:version/profiles/:profileId/inventory', (req, res) => res.send({ inventory: [] }));
 
         // Serve population data
         this.registerGet(app, '/v1/profiles/me/populations', this.handleGetPopulations);
@@ -255,26 +258,50 @@ class UbiservicesRouteHandler extends RouteHandler {
      * @param {Request} req - The request object
      * @param {Response} res - The response object
      */
-    handleGetProfiles(req, res) {
-        // Use the cachedTicket to resolve profileId from Authorization header, or default
+    async handleGetProfiles(req, res) {
         const authHeader = req.header('Authorization');
-        let profileIdFromTicket = 'UnknownTicket';
-        if (authHeader && authHeader.startsWith('Ubi_v1 ')) {
-            const ticket = authHeader.substring(7); // Remove 'Ubi_v1 ' prefix
-            profileIdFromTicket = this.cachedTicket[ticket] || 'UnknownTicket';
+        let profileIdFromTicket = null;
+        if (authHeader) {
+            const rawTicket = authHeader.startsWith('Ubi_v1 ') ? authHeader.substring(7) : authHeader;
+            profileIdFromTicket = this.cachedTicket[rawTicket] || this.cachedTicket[authHeader] || null;
+            if (!profileIdFromTicket) {
+                profileIdFromTicket = await AccountService.findUserFromTicket(authHeader);
+            }
+        }
+        const clientIp = this.getClientIp(req);
+        if (!profileIdFromTicket && this.ipCache[clientIp]) {
+            profileIdFromTicket = this.ipCache[clientIp].profileId;
         }
 
-        const profileId = `${profileIdFromTicket}/userId/${req.query.idOnPlatform}`;
+        const profileIdsParam = req.query.profileIds || req.query.userIds;
+        let ids = [];
+        if (profileIdsParam) {
+            ids = profileIdsParam.split(',');
+        } else if (req.query.idOnPlatform) {
+            ids = [req.query.idOnPlatform];
+        } else if (profileIdFromTicket) {
+            ids = [profileIdFromTicket];
+        } else {
+            const allAccounts = await AccountService.getAllAccounts();
+            const keys = Object.keys(allAccounts);
+            if (keys.length > 0) ids = [keys[0]];
+            else ids = [uuidv4()];
+        }
 
-        res.send({
-            profiles: [{
-                profileId,
-                userId: profileId,
+        const profiles = [];
+        for (const id of ids) {
+            const user = await AccountService.getUserData(id);
+            const name = user ? (user.name || user.nickname || user.username || "Ninoralf") : "Ninoralf";
+            profiles.push({
+                profileId: id,
+                userId: id,
                 platformType: "uplay",
-                idOnPlatform: profileId,
-                nameOnPlatform: "Ryujinx"
-            }]
-        });
+                idOnPlatform: id,
+                nameOnPlatform: name
+            });
+        }
+
+        res.send({ profiles });
     }
 
     /**
