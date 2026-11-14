@@ -203,8 +203,12 @@ class UbiservicesRouteHandler extends RouteHandler {
             console.log("[ACC] Error fetching from Ubisoft services", error.message);
 
             if (this.ipCache[clientIp]) {
-                console.log(`[ACC] Returning cached session for IP ${clientIp}`);
-                return res.send(this.ipCache[clientIp]);
+                const existingSession = this.ipCache[clientIp];
+                const existingUser = await AccountService.getUserData(existingSession.profileId);
+                if (existingUser) {
+                    console.log(`[ACC] Returning cached session for IP ${clientIp}`);
+                    return res.send(existingSession);
+                }
             }
 
             const profileId = uuidv4();
@@ -213,7 +217,19 @@ class UbiservicesRouteHandler extends RouteHandler {
 
             console.log("[ACC] Generating Fake Session for", profileId);
 
-            const fakeSession = this.generateSessionData(profileId, "NintendoSwitch", clientIp, clientIpCountry, userTicket);
+            const defaults = this.getDefaultUserUnlocks();
+            await AccountService.updateUser(profileId, {
+                username: "Dancer",
+                nickname: "Dancer",
+                name: "Dancer",
+                userId: profileId,
+                ticket: `Ubi_v1 ${userTicket}`,
+                country: clientIpCountry || 'US',
+                platformId: 'pc',
+                ...defaults
+            });
+
+            const fakeSession = this.generateSessionData(profileId, "Dancer", clientIp, clientIpCountry, userTicket);
             this.ipCache[clientIp] = fakeSession; // Cache the fake session for this IP
 
             res.send(fakeSession);
