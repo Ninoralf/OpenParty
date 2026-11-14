@@ -29,18 +29,28 @@ class CarouselRouteHandler extends RouteHandler {
         // Carousel routes
         this.registerPost(app, "/carousel/v2/pages/avatars", this.handleCarousel);
         this.registerGet(app, "/carousel/v2/pages/avatars", this.handleCarousel);
+        this.registerPost(app, "/carousel/v2/pages/avatars-creation", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/avatars-creation", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
         this.registerGet(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
+        this.registerPost(app, "/carousel/v2/pages/friend-dancerprofile", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/friend-dancerprofile", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
         this.registerGet(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
         this.registerGet(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/quests", this.handleCarousel);
         this.registerGet(app, "/carousel/v2/pages/quests", this.handleCarousel);
-        this.registerPost(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
-        this.registerGet(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
+        this.registerPost(app, "/carousel/v2/pages/create-playlist", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/create-playlist", this.handleCarousel);
+        this.registerPost(app, "/carousel/v2/pages/skins", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/skins", this.handleCarousel);
+        this.registerPost(app, "/carousel/v2/pages/skins-creation", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/skins-creation", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
         this.registerGet(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
+        this.registerPost(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
+        this.registerGet(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
 
         this.logger.info(`Routes initialized`);
     }
@@ -52,11 +62,14 @@ class CarouselRouteHandler extends RouteHandler {
      */
     handleCarousel(req, res) {
         const path = req.path.split('/').pop();
+        this.logger.info(`Serving carousel page: ${path}`);
         switch (path) {
             case 'avatars':
+            case 'avatars-creation':
                 res.send(coreMain.avatars);
                 break;
             case 'dancerprofile':
+            case 'friend-dancerprofile':
                 res.send(coreMain.dancerprofile);
                 break;
             case 'jdtv':
@@ -66,9 +79,48 @@ class CarouselRouteHandler extends RouteHandler {
             case 'quests':
                 res.send(coreMain.quests);
                 break;
+            case 'create-playlist':
+                res.send(coreMain.create_playlist);
+                break;
+            case 'skins':
+            case 'skins-creation':
+                res.send(this.getSkinsCarousel());
+                break;
             default:
                 res.status(404).send('Not found');
         }
+    }
+
+    /**
+     * Get skins carousel structure
+     * @returns {Object} Carousel content for skins
+     */
+    getSkinsCarousel() {
+        return {
+            "__class": "JD_CarouselContent",
+            "categories": [
+                {
+                    "__class": "Category",
+                    "title": "Skins",
+                    "act": "ui_carousel",
+                    "isc": "grp_row",
+                    "items": [
+                        {
+                            "__class": "Item",
+                            "offlineRequest": {
+                                "__class": "JD_CarouselCustomizableItemRequest",
+                                "itemType": 1,
+                                "jdVersion": 2017,
+                                "lockType": 0,
+                                "sortBy": 0,
+                                "uuid": "4c45a707-1b03-4f24-9540-36a43924f469"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "actionLists": {}
+        };
     }
 
     /**
@@ -77,6 +129,22 @@ class CarouselRouteHandler extends RouteHandler {
      * @param {Response} res - The response object
      */
     async handleCarouselPages(req, res) {
+        const mode = req.params.mode;
+        this.logger.info(`Handling carousel page request for mode: ${mode}`);
+        
+        if (mode === 'avatars' || mode === 'avatars-creation') {
+            return res.send(coreMain.avatars);
+        }
+        if (mode === 'dancerprofile' || mode === 'friend-dancerprofile') {
+            return res.send(coreMain.dancerprofile);
+        }
+        if (mode === 'skins' || mode === 'skins-creation') {
+            return res.send(this.getSkinsCarousel());
+        }
+        if (mode === 'create-playlist') {
+            return res.send(coreMain.create_playlist);
+        }
+
         let search = "";
         if (req.body.searchString && req.body.searchString != "") {
             search = req.body.searchString;
@@ -110,13 +178,10 @@ class CarouselRouteHandler extends RouteHandler {
         }
 
         if (isPlaylist) {
-            // Assuming core.generatePlaylist is still needed for playlist categories
-            // TODO: Potentially personalize playlists as well if needed in the future
             return res.json(require('../../lib/playlist').generatePlaylist().playlistcategory);
         }
 
         if (action != null) {
-            // Pass profileId to generateCarousel for personalization
             return res.send(await CarouselService.generateCarousel(search, action, profileId));
         }
         

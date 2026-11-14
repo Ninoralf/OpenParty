@@ -74,6 +74,10 @@ class Core {
    * @param {Express} express - The Express module
    */
   configureMiddleware(app) {
+    app.use((req, res, next) => {
+      console.log(`[HTTP] ${req.method} ${req.originalUrl || req.url}`);
+      next();
+    });
     app.use(express.json());
     app.use(express.urlencoded({ extended: true })); // Added for form data
     // app.use(express.raw()); // If you need raw body parsing, uncomment this and ensure AdminPanelPlugin doesn't re-add it.

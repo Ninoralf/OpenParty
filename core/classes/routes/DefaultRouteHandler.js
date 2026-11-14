@@ -54,7 +54,8 @@ const path = require('path');
      */
     checkAuth(req, res) {
         if (req.header('X-SkuId')) {
-            if (!(req.header('X-SkuId').startsWith("jd") || req.header('X-SkuId').startsWith("JD")) || !req.headers["authorization"].startsWith("Ubi")) {
+            const auth = req.headers["authorization"] || "";
+            if (!(req.header('X-SkuId').startsWith("jd") || req.header('X-SkuId').startsWith("JD")) || !auth.startsWith("Ubi")) {
                 const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
                 res.status(400).send({
                     'error': 400,
@@ -119,7 +120,9 @@ const path = require('path');
 
         // Item and customization routes
         this.registerGet(app, "/customizable-itemdb/v1/items", this.handleItems);
+        this.registerPost(app, "/customizable-itemdb/v1/items", this.handleItems);
         this.registerGet(app, "/constant-provider/v1/sku-constants", this.handleSkuConstants);
+        this.registerPost(app, "/constant-provider/v1/sku-constants", this.handleSkuConstants);
         this.registerGet(app, "/dance-machine/v1/blocks", this.handleDanceMachine);
 
         // Content authorization route
