@@ -212,9 +212,7 @@ class Account {
      * @returns {Object} Plain object representation
      */
     toJSON() {
-        const data = { ...this };
-        delete data.ticket;
-        return data;
+        return { ...this };
     }
 
     /**
@@ -222,8 +220,8 @@ class Account {
      * @returns {Object} Sanitized plain object representation
      */
     toPublicJSON() {
-        const publicData = this.toJSON();
-        // Explicitly remove sensitive fields if they were somehow added
+        const publicData = { ...this };
+        // Explicitly remove sensitive fields
         delete publicData.email;
         delete publicData.password;
         delete publicData.ticket;

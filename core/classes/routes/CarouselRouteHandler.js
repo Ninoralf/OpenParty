@@ -28,12 +28,19 @@ class CarouselRouteHandler extends RouteHandler {
 
         // Carousel routes
         this.registerPost(app, "/carousel/v2/pages/avatars", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/avatars", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/dancerprofile", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/jdtv", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/jdtv-nx", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/quests", this.handleCarousel);
+        this.registerGet(app, "/carousel/v2/pages/quests", this.handleCarousel);
         this.registerPost(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
+        this.registerGet(app, "/carousel/v2/pages/:mode", this.handleCarouselPages);
         this.registerPost(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
+        this.registerGet(app, "/carousel/v2/pages/upsell-videos", this.handleUpsellVideos);
 
         this.logger.info(`Routes initialized`);
     }

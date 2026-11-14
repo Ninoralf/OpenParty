@@ -19,13 +19,13 @@
         {
             "name": "HelloWorldPlugin",
             "description": "A simple example plugin that demonstrates the plugin system",
-            "path": "{dirname}/plugins/HelloWorldPlugin.js",
+            "path": "{dirname}/plugins/HelloWorld/HelloWorld.js",
             "execution": "init"
         },
         {
             "name": "AdminPanelPlugin",
             "description": "Secure admin panel for server management and maintenance",
-            "path": "{dirname}/plugins/AdminPanelPlugin.js",
+            "path": "{dirname}/plugins/AdminPanel/AdminPanelPlugin.js",
             "execution": "init"
         }
     ]

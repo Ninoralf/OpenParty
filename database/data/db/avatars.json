@@ -108,7 +108,7 @@
             "__class": "JD_CarouselCustomizableItemRequest",
             "itemType": 0,
             "jdVersion": 2017,
-            "lockType": 20,
+            "lockType": 0,
             "sortBy": 0,
             "uuid": "c1712549-8b73-44d6-9c17-e3cac56d5590"
           }

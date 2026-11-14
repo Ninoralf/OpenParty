@@ -27,10 +27,26 @@ class AccountService {
      * @returns {Promise<string|null>} Profile ID if found, null otherwise
      */
     async findUserFromTicket(ticket) {
+        if (!ticket) return null;
         this.logger.info(`Finding user from ticket`);
-        const hashedTicket = crypto.createHash('sha256').update(ticket).digest('hex');
-        const account = await AccountRepository.findByTicket(hashedTicket);
-        return account ? account.profileId : null;
+        const rawTicket = ticket.startsWith('Ubi_v1 ') ? ticket.substring(7) : ticket;
+        const prefixedTicket = ticket.startsWith('Ubi_v1 ') ? ticket : `Ubi_v1 ${ticket}`;
+
+        const candidates = [
+            crypto.createHash('sha256').update(ticket).digest('hex'),
+            crypto.createHash('sha256').update(rawTicket).digest('hex'),
+            crypto.createHash('sha256').update(prefixedTicket).digest('hex'),
+            ticket,
+            rawTicket,
+            prefixedTicket
+        ];
+
+        for (const candidate of candidates) {
+            const account = await AccountRepository.findByTicket(candidate);
+            if (account) return account.profileId;
+        }
+
+        return null;
     }
 
     /**

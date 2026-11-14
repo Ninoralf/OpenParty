@@ -399,12 +399,10 @@ class AccountRouteHandler extends RouteHandler {
         const authHeader = req.header('Authorization');
         const ticket = authHeader ? authHeader : null; // Keep the full header as ticket
 
-        if (!ticket) {
-            this.logger.warn(`POST /profile/v2/profiles: Missing Authorization header (ticket).`);
-            return res.status(400).send({ message: "Missing Authorization header (ticket)." });
+        let profileId = req.query.profileId;
+        if (!profileId && ticket) {
+            profileId = await AccountService.findUserFromTicket(ticket);
         }
-
-        const profileId = await AccountService.findUserFromTicket(ticket);
 
         if (!profileId) {
             this.logger.warn(`POST /profile/v2/profiles: Profile not found for provided ticket.`);

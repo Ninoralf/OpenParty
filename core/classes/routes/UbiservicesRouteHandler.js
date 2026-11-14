@@ -131,22 +131,60 @@ class UbiservicesRouteHandler extends RouteHandler {
             console.log("[ACC] CustomAuth detected, verifying...");
 
             const { profileId, username, email, password } = customAuthData;
-            const userData = AccountService.getUserData(profileId);
+            const userData = await AccountService.getUserData(profileId);
             const ticket = `CustomAuth${headers.authorization.split(" t=")[1]}`;
+            const defaults = this.getDefaultUserUnlocks();
+            const decodedUsername = this.atob(username);
 
             if (userData && userData.password && userData.email && userData.password === password) {
-                console.log("[ACC] CustomAuth login: ", this.atob(username));
-                AccountService.updateUser(profileId, { username: this.atob(username), nickname: this.atob(username), email, password, userId: profileId, ticket: `Ubi_v1 ${ticket}` });
-                const sessionData = this.generateSessionData(profileId, this.atob(username), clientIp, clientIpCountry, ticket);
+                console.log("[ACC] CustomAuth login: ", decodedUsername);
+                const updates = {
+                    username: decodedUsername,
+                    nickname: decodedUsername,
+                    name: decodedUsername,
+                    email,
+                    password,
+                    userId: profileId,
+                    ticket: `Ubi_v1 ${ticket}`
+                };
+                if (!userData.avatar) updates.avatar = defaults.avatar;
+                if (!userData.skin) updates.skin = defaults.skin;
+                if (!userData.alias) updates.alias = defaults.alias;
+                if (!userData.portraitBorder) updates.portraitBorder = defaults.portraitBorder;
+                if (!userData.unlockedAvatars || userData.unlockedAvatars.length === 0) {
+                    updates.unlockedAvatars = defaults.unlockedAvatars;
+                }
+                if (!userData.unlockedSkins || userData.unlockedSkins.length === 0) {
+                    updates.unlockedSkins = defaults.unlockedSkins;
+                }
+                if (!userData.unlockedAliases || userData.unlockedAliases.length === 0) {
+                    updates.unlockedAliases = defaults.unlockedAliases;
+                }
+                if (!userData.unlockedPortraitBorders || userData.unlockedPortraitBorders.length === 0) {
+                    updates.unlockedPortraitBorders = defaults.unlockedPortraitBorders;
+                }
+                await AccountService.updateUser(profileId, updates);
+                const sessionData = this.generateSessionData(profileId, decodedUsername, clientIp, clientIpCountry, ticket);
                 res.send(sessionData);
                 return;
             } else if (!userData || !userData.password || !userData.email) {
-                console.log("[ACC] CustomAuth register: ", this.atob(username));
-                AccountService.updateUser(profileId, { username: this.atob(username), nickname: this.atob(username), email, password, userId: profileId, ticket: `Ubi_v1 ${ticket}` });
-                res.send(this.generateSessionData(profileId, this.atob(username), clientIp, clientIpCountry, ticket));
+                console.log("[ACC] CustomAuth register: ", decodedUsername);
+                await AccountService.updateUser(profileId, {
+                    username: decodedUsername,
+                    nickname: decodedUsername,
+                    name: decodedUsername,
+                    email,
+                    password,
+                    userId: profileId,
+                    ticket: `Ubi_v1 ${ticket}`,
+                    country: clientIpCountry || 'US',
+                    platformId: 'pc',
+                    ...defaults
+                });
+                res.send(this.generateSessionData(profileId, decodedUsername, clientIp, clientIpCountry, ticket));
                 return;
             } else {
-                console.log("[ACC] CustomAuth login, Invalid Credentials: ", this.atob(username));
+                console.log("[ACC] CustomAuth login, Invalid Credentials: ", decodedUsername);
             }
         }
 
@@ -494,6 +532,53 @@ class UbiservicesRouteHandler extends RouteHandler {
             sessionKey: "TqCz5+J0w9e8qpLp/PLr9BCfAc30hKlEJbN0Xr+mbZa=", // Fixed string as in original
             rememberMeTicket: null,
         };
+    }
+
+    /**
+     * Get default unlock items for newly created users
+     * @returns {Object} Default items and unlock arrays
+     * @private
+     */
+    getDefaultUserUnlocks() {
+        try {
+            const items = this.core.main.items || {};
+            const aliases = this.core.main.aliases || {};
+            
+            const avatarIds = items.avatars 
+                ? Object.keys(items.avatars).map(Number).filter(n => !isNaN(n))
+                : [1, 2, 3, 4, 5, 512];
+            const skinIds = items.skins 
+                ? Object.keys(items.skins).map(Number).filter(n => !isNaN(n))
+                : [1];
+            const portraitBorderIds = items.portraitBorders 
+                ? Object.keys(items.portraitBorders).map(Number).filter(n => !isNaN(n))
+                : [1];
+            const aliasIds = aliases.aliases 
+                ? Object.keys(aliases.aliases).map(Number).filter(n => !isNaN(n))
+                : [1];
+
+            return {
+                avatar: 512,
+                skin: 1,
+                alias: 1,
+                portraitBorder: 1,
+                unlockedAvatars: avatarIds,
+                unlockedSkins: skinIds,
+                unlockedPortraitBorders: portraitBorderIds,
+                unlockedAliases: aliasIds
+            };
+        } catch (e) {
+            return {
+                avatar: 512,
+                skin: 1,
+                alias: 1,
+                portraitBorder: 1,
+                unlockedAvatars: [1, 2, 3, 4, 5, 512],
+                unlockedSkins: [1],
+                unlockedPortraitBorders: [1],
+                unlockedAliases: [1]
+            };
+        }
     }
 }
 
