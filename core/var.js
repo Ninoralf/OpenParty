@@ -77,6 +77,10 @@ if (main.items) {
       item.UnlockType = 0;
       item.unlockType = 0;
 
+      if (item.url && typeof item.url === 'string') {
+        item.url = item.url.replace('jdcn-switch.cdn.ubisoft.cn', 'jd-s3.bc5f39.workers.dev');
+      }
+
       const mojo = item.mojoPrice !== undefined ? item.mojoPrice : (item.MojoPrice !== undefined ? item.MojoPrice : 0);
       item.MojoPrice = mojo;
       item.mojoPrice = mojo;
@@ -121,6 +125,10 @@ if (main.items) {
 
       item.itemType = 1;
       item.ItemType = 1;
+
+      if (item.url && typeof item.url === 'string') {
+        item.url = item.url.replace('jdcn-switch.cdn.ubisoft.cn', 'jd-s3.bc5f39.workers.dev');
+      }
     }
   }
 }
