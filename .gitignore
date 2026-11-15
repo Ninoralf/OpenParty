@@ -7,6 +7,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+Just.Dance.2017-DELUSIONAL/
+find_uplay.py
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 

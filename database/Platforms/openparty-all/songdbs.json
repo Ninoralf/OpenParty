@@ -1,4 +1,5 @@
-{"Despacito": {
+{
+  "Despacito": {
     "artist": "Luis Fonsi & Daddy Yankee",
     "assets": {
       "nx": {
@@ -118,4 +119,2798 @@
       13032,
       15289
     ]
-  }}
+  },
+  "AllAboutUs": {
+    "artist": "Jordan Fisher",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Jordan Fisher",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 196,
+    "mapName": "AllAboutUs",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "AllAboutUs_mapContent"
+    },
+    "parentMapName": "AllAboutUs",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "JustDance2017"
+    ],
+    "title": "All About Us",
+    "urls": {}
+  },
+  "Bailar": {
+    "artist": "Deorro feat. Elvis Crespo",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Deorro feat. Elvis Crespo",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 160,
+    "mapName": "Bailar",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Bailar_mapContent"
+    },
+    "parentMapName": "Bailar",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Bailar",
+    "urls": {}
+  },
+  "Bang": {
+    "artist": "Anitta",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Anitta",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 191,
+    "mapName": "Bang",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Bang_mapContent"
+    },
+    "parentMapName": "Bang",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Bang",
+    "urls": {}
+  },
+  "Bicicleta": {
+    "artist": "Carlos Vives & Shakira",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Carlos Vives & Shakira",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 228,
+    "mapName": "Bicicleta",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Bicicleta_mapContent"
+    },
+    "parentMapName": "Bicicleta",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Duet",
+      "Easy",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "La Bicicleta",
+    "urls": {}
+  },
+  "Bonbon": {
+    "artist": "Era Istrefi",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Era Istrefi",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 167,
+    "mapName": "Bonbon",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Bonbon_mapContent"
+    },
+    "parentMapName": "Bonbon",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Bonbon",
+    "urls": {}
+  },
+  "CakeByTheOcean": {
+    "artist": "DNCE",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to DNCE",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 218,
+    "mapName": "CakeByTheOcean",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "CakeByTheOcean_mapContent"
+    },
+    "parentMapName": "CakeByTheOcean",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Cake by the Ocean",
+    "urls": {}
+  },
+  "CakeByTheOceanALT": {
+    "artist": "DNCE",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to DNCE",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 218,
+    "mapName": "CakeByTheOceanALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "CakeByTheOceanALT_mapContent"
+    },
+    "parentMapName": "CakeByTheOcean",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Duet",
+      "Hard",
+      "JustDance2017"
+    ],
+    "title": "Cake by the Ocean (Alternate)",
+    "urls": {}
+  },
+  "CantFeelMyFace": {
+    "artist": "The Weeknd",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to The Weeknd",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 213,
+    "mapName": "CantFeelMyFace",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "CantFeelMyFace_mapContent"
+    },
+    "parentMapName": "CantFeelMyFace",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "JustDance2017"
+    ],
+    "title": "Can't Feel My Face",
+    "urls": {}
+  },
+  "CheapThrills": {
+    "artist": "Sia feat. Sean Paul",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Sia feat. Sean Paul",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 224,
+    "mapName": "CheapThrills",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "CheapThrills_mapContent"
+    },
+    "parentMapName": "CheapThrills",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Cheap Thrills",
+    "urls": {}
+  },
+  "CheapThrillsALT": {
+    "artist": "Sia feat. Sean Paul",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to Sia feat. Sean Paul",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 224,
+    "mapName": "CheapThrillsALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "CheapThrillsALT_mapContent"
+    },
+    "parentMapName": "CheapThrills",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Quartet",
+      "Hard",
+      "Bollywood",
+      "JustDance2017"
+    ],
+    "title": "Cheap Thrills (Alternate)",
+    "urls": {}
+  },
+  "ColaSong": {
+    "artist": "INNA feat. J Balvin",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to INNA feat. J Balvin",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 198,
+    "mapName": "ColaSong",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ColaSong_mapContent"
+    },
+    "parentMapName": "ColaSong",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Cola Song",
+    "urls": {}
+  },
+  "ColaSongALT": {
+    "artist": "INNA feat. J Balvin",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to INNA feat. J Balvin",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 198,
+    "mapName": "ColaSongALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ColaSongALT_mapContent"
+    },
+    "parentMapName": "ColaSong",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Alternate",
+      "Quartet",
+      "Easy",
+      "JustDance2017"
+    ],
+    "title": "Cola Song (Alternate)",
+    "urls": {}
+  },
+  "Daddy": {
+    "artist": "PSY feat. CL",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to PSY feat. CL",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 230,
+    "mapName": "Daddy",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Daddy_mapContent"
+    },
+    "parentMapName": "Daddy",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Duet",
+      "Medium",
+      "Kpop",
+      "JustDance2017"
+    ],
+    "title": "DADDY",
+    "urls": {}
+  },
+  "DaddyALT": {
+    "artist": "PSY feat. CL",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to PSY feat. CL",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 230,
+    "mapName": "DaddyALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "DaddyALT_mapContent"
+    },
+    "parentMapName": "Daddy",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Hard",
+      "Kpop",
+      "JustDance2017"
+    ],
+    "title": "DADDY (Alternate)",
+    "urls": {}
+  },
+  "DontStopMe": {
+    "artist": "Queen",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Queen",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 209,
+    "mapName": "DontStopMe",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "DontStopMe_mapContent"
+    },
+    "parentMapName": "DontStopMe",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Rock",
+      "JustDance2017"
+    ],
+    "title": "Don't Stop Me Now",
+    "urls": {}
+  },
+  "DontStopMeALT": {
+    "artist": "Queen",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Queen",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 209,
+    "mapName": "DontStopMeALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "DontStopMeALT_mapContent"
+    },
+    "parentMapName": "DontStopMe",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Hard",
+      "Rock",
+      "Panda",
+      "JustDance2017"
+    ],
+    "title": "Don't Stop Me Now (Alternate)",
+    "urls": {}
+  },
+  "DragosteaDinTei": {
+    "artist": "O-Zone",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to O-Zone",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 215,
+    "mapName": "DragosteaDinTei",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "DragosteaDinTei_mapContent"
+    },
+    "parentMapName": "DragosteaDinTei",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Trio",
+      "Easy",
+      "JustDance2017"
+    ],
+    "title": "Dragostea Din Tei",
+    "urls": {}
+  },
+  "ElTiki": {
+    "artist": "Maluma",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Maluma",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 184,
+    "mapName": "ElTiki",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ElTiki_mapContent"
+    },
+    "parentMapName": "ElTiki",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Duet",
+      "Easy",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "El Tiki",
+    "urls": {}
+  },
+  "ElTikiALT": {
+    "artist": "Maluma",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Maluma",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 184,
+    "mapName": "ElTikiALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ElTikiALT_mapContent"
+    },
+    "parentMapName": "ElTiki",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Alternate",
+      "Trio",
+      "Medium",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "El Tiki (Alternate)",
+    "urls": {}
+  },
+  "GhostInTheKeys": {
+    "artist": "Halloween Thrills",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to Halloween Thrills",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 164,
+    "mapName": "GhostInTheKeys",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "GhostInTheKeys_mapContent"
+    },
+    "parentMapName": "GhostInTheKeys",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Quartet",
+      "Medium",
+      "Halloween",
+      "JustDance2017"
+    ],
+    "title": "Ghost in the Keys",
+    "urls": {}
+  },
+  "Groove": {
+    "artist": "Jack & Jack",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Jack & Jack",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 215,
+    "mapName": "Groove",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Groove_mapContent"
+    },
+    "parentMapName": "Groove",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Duet",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Groove",
+    "urls": {}
+  },
+  "Hips": {
+    "artist": "Shakira feat. Wyclef Jean",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Shakira feat. Wyclef Jean",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 218,
+    "mapName": "Hips",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Hips_mapContent"
+    },
+    "parentMapName": "Hips",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Hips Don't Lie",
+    "urls": {}
+  },
+  "HipsALT": {
+    "artist": "Shakira feat. Wyclef Jean",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Shakira feat. Wyclef Jean",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 218,
+    "mapName": "HipsALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "HipsALT_mapContent"
+    },
+    "parentMapName": "Hips",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Duet",
+      "Hard",
+      "Latin",
+      "Sumo",
+      "JustDance2017"
+    ],
+    "title": "Hips Don't Lie (Alternate)",
+    "urls": {}
+  },
+  "ILoveRock": {
+    "artist": "Fast Forward Highway",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Fast Forward Highway",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 175,
+    "mapName": "ILoveRock",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ILoveRock_mapContent"
+    },
+    "parentMapName": "ILoveRock",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "Rock",
+      "JustDance2017"
+    ],
+    "title": "I Love Rock 'n' Roll",
+    "urls": {}
+  },
+  "IntoYou": {
+    "artist": "Ariana Grande",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Ariana Grande",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 242,
+    "mapName": "IntoYou",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "IntoYou_mapContent"
+    },
+    "parentMapName": "IntoYou",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Into You",
+    "urls": {}
+  },
+  "LastChristmas": {
+    "artist": "Santa Clones",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Santa Clones",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 228,
+    "mapName": "LastChristmas",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "LastChristmas_mapContent"
+    },
+    "parentMapName": "LastChristmas",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Duet",
+      "Easy",
+      "Holiday",
+      "JustDance2017"
+    ],
+    "title": "Last Christmas",
+    "urls": {}
+  },
+  "LeanOn": {
+    "artist": "Major Lazer & DJ Snake feat. MØ",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to Major Lazer & DJ Snake feat. MØ",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 176,
+    "mapName": "LeanOn",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "LeanOn_mapContent"
+    },
+    "parentMapName": "LeanOn",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Quartet",
+      "Medium",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "Lean On",
+    "urls": {}
+  },
+  "LeanOnALT": {
+    "artist": "Major Lazer & DJ Snake feat. MØ",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Major Lazer & DJ Snake feat. MØ",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 176,
+    "mapName": "LeanOnALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "LeanOnALT_mapContent"
+    },
+    "parentMapName": "LeanOn",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Hard",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "Lean On (Alternate)",
+    "urls": {}
+  },
+  "Leila": {
+    "artist": "Cheb Salama",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Cheb Salama",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 200,
+    "mapName": "Leila",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Leila_mapContent"
+    },
+    "parentMapName": "Leila",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "Leila",
+    "urls": {}
+  },
+  "LikeIWould": {
+    "artist": "ZAYN",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to ZAYN",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 192,
+    "mapName": "LikeIWould",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "LikeIWould_mapContent"
+    },
+    "parentMapName": "LikeIWould",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "JustDance2017"
+    ],
+    "title": "LIKE I WOULD",
+    "urls": {}
+  },
+  "LittleSwing": {
+    "artist": "AronChupa feat. Little Sis Nora",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to AronChupa feat. Little Sis Nora",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 163,
+    "mapName": "LittleSwing",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "LittleSwing_mapContent"
+    },
+    "parentMapName": "LittleSwing",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Duet",
+      "Easy",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "Little Swing",
+    "urls": {}
+  },
+  "NaeNae": {
+    "artist": "Silentó",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to Silentó",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 185,
+    "mapName": "NaeNae",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "NaeNae_mapContent"
+    },
+    "parentMapName": "NaeNae",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Quartet",
+      "Easy",
+      "Hip Hop",
+      "JustDance2017"
+    ],
+    "title": "Watch Me (Whip / Nae Nae)",
+    "urls": {}
+  },
+  "NaeNaeALT": {
+    "artist": "Silentó",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Silentó",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 185,
+    "mapName": "NaeNaeALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "NaeNaeALT_mapContent"
+    },
+    "parentMapName": "NaeNae",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Alternate",
+      "Duet",
+      "Easy",
+      "Hip Hop",
+      "JustDance2017"
+    ],
+    "title": "Watch Me (Whip / Nae Nae) (Alternate)",
+    "urls": {}
+  },
+  "Oishii": {
+    "artist": "Wanko Ni Mero Mero",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Wanko Ni Mero Mero",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 176,
+    "mapName": "Oishii",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Oishii_mapContent"
+    },
+    "parentMapName": "Oishii",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Duet",
+      "Easy",
+      "JustDance2017"
+    ],
+    "title": "Oishii Oishii",
+    "urls": {}
+  },
+  "PoPiPo": {
+    "artist": "Hatsune Miku",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Hatsune Miku",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 182,
+    "mapName": "PoPiPo",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "PoPiPo_mapContent"
+    },
+    "parentMapName": "PoPiPo",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Main",
+      "Trio",
+      "Hard",
+      "J-pop",
+      "JustDance2017"
+    ],
+    "title": "PoPiPo",
+    "urls": {}
+  },
+  "Radical": {
+    "artist": "Dyro & Dannic",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Dyro & Dannic",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 160,
+    "mapName": "Radical",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Radical_mapContent"
+    },
+    "parentMapName": "Radical",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Main",
+      "Trio",
+      "Hard",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "RADICAL",
+    "urls": {}
+  },
+  "RadicalALT": {
+    "artist": "Dyro & Dannic",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Dyro & Dannic",
+    "difficulty": 4,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 160,
+    "mapName": "RadicalALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "RadicalALT_mapContent"
+    },
+    "parentMapName": "Radical",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 4,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Extreme",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "RADICAL (Alternate)",
+    "urls": {}
+  },
+  "RedMangoose": {
+    "artist": "Latino Sunset",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Latino Sunset",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 166,
+    "mapName": "RedMangoose",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "RedMangoose_mapContent"
+    },
+    "parentMapName": "RedMangoose",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Red Mongoose",
+    "urls": {}
+  },
+  "RunTheNight": {
+    "artist": "Gigi Rowe",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Gigi Rowe",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 222,
+    "mapName": "RunTheNight",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "RunTheNight_mapContent"
+    },
+    "parentMapName": "RunTheNight",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Run The Night",
+    "urls": {}
+  },
+  "Samba": {
+    "artist": "Latino Sunset",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Latino Sunset",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 165,
+    "mapName": "Samba",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Samba_mapContent"
+    },
+    "parentMapName": "Samba",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Carnaval Boom",
+    "urls": {}
+  },
+  "ScreamNShout": {
+    "artist": "will.i.am feat. Britney Spears",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to will.i.am feat. Britney Spears",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 252,
+    "mapName": "ScreamNShout",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ScreamNShout_mapContent"
+    },
+    "parentMapName": "ScreamNShout",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Quartet",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Scream & Shout",
+    "urls": {}
+  },
+  "ScreamNShoutALT": {
+    "artist": "will.i.am feat. Britney Spears",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to will.i.am feat. Britney Spears",
+    "difficulty": 4,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 252,
+    "mapName": "ScreamNShoutALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "ScreamNShoutALT_mapContent"
+    },
+    "parentMapName": "ScreamNShout",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 4,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Extreme",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Scream & Shout (Alternate)",
+    "urls": {}
+  },
+  "September": {
+    "artist": "Equinox Stars",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Equinox Stars",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 215,
+    "mapName": "September",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "September_mapContent"
+    },
+    "parentMapName": "September",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Trio",
+      "Medium",
+      "Disco Funk",
+      "JustDance2017"
+    ],
+    "title": "September",
+    "urls": {}
+  },
+  "SeptemberALT": {
+    "artist": "Equinox Stars",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Equinox Stars",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 215,
+    "mapName": "SeptemberALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "SeptemberALT_mapContent"
+    },
+    "parentMapName": "September",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Hard",
+      "Disco Funk",
+      "JustDance2017"
+    ],
+    "title": "September (Alternate)",
+    "urls": {}
+  },
+  "SingleLadies": {
+    "artist": "Beyoncé",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Beyoncé",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 193,
+    "mapName": "SingleLadies",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "SingleLadies_mapContent"
+    },
+    "parentMapName": "SingleLadies",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Main",
+      "Trio",
+      "Hard",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Single Ladies (Put a Ring on It)",
+    "urls": {}
+  },
+  "Sorry": {
+    "artist": "Justin Bieber",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Justin Bieber",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 200,
+    "mapName": "Sorry",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Sorry_mapContent"
+    },
+    "parentMapName": "Sorry",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Sorry",
+    "urls": {}
+  },
+  "SorryALT": {
+    "artist": "Justin Bieber",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Justin Bieber",
+    "difficulty": 4,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 200,
+    "mapName": "SorryALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "SorryALT_mapContent"
+    },
+    "parentMapName": "Sorry",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 4,
+    "tags": [
+      "Alternate",
+      "Solo",
+      "Extreme",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Sorry (Alternate)",
+    "urls": {}
+  },
+  "TeDominar": {
+    "artist": "Daya Luz",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 3,
+    "credits": "All Credits Goes to Daya Luz",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 208,
+    "mapName": "TeDominar",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "TeDominar_mapContent"
+    },
+    "parentMapName": "TeDominar",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Trio",
+      "Medium",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Te Dominar",
+    "urls": {}
+  },
+  "TicoTico": {
+    "artist": "The Frankie Bostello Orchestra",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to The Frankie Bostello Orchestra",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 147,
+    "mapName": "TicoTico",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "TicoTico_mapContent"
+    },
+    "parentMapName": "TicoTico",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Duet",
+      "Medium",
+      "Latin",
+      "JustDance2017"
+    ],
+    "title": "Tico-Tico no Fubá",
+    "urls": {}
+  },
+  "Titanium": {
+    "artist": "David Guetta feat. Sia",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to David Guetta feat. Sia",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 245,
+    "mapName": "Titanium",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "Titanium_mapContent"
+    },
+    "parentMapName": "Titanium",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "Titanium",
+    "urls": {}
+  },
+  "WhatIsLove": {
+    "artist": "Ultraclub 90",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Ultraclub 90",
+    "difficulty": 1,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 248,
+    "mapName": "WhatIsLove",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "WhatIsLove_mapContent"
+    },
+    "parentMapName": "WhatIsLove",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 1,
+    "tags": [
+      "Main",
+      "Solo",
+      "Easy",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "What Is Love",
+    "urls": {}
+  },
+  "WhatIsLoveALT": {
+    "artist": "Ultraclub 90",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 2,
+    "credits": "All Credits Goes to Ultraclub 90",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 248,
+    "mapName": "WhatIsLoveALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "WhatIsLoveALT_mapContent"
+    },
+    "parentMapName": "WhatIsLove",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Duet",
+      "Hard",
+      "Electro",
+      "JustDance2017"
+    ],
+    "title": "What Is Love (Alternate)",
+    "urls": {}
+  },
+  "WhereverIGo": {
+    "artist": "OneRepublic",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to OneRepublic",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 170,
+    "mapName": "WhereverIGo",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "WhereverIGo_mapContent"
+    },
+    "parentMapName": "WhereverIGo",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Wherever I Go",
+    "urls": {}
+  },
+  "WorthIt": {
+    "artist": "Fifth Harmony feat. Kid Ink",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 1,
+    "credits": "All Credits Goes to Fifth Harmony feat. Kid Ink",
+    "difficulty": 2,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 224,
+    "mapName": "WorthIt",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "WorthIt_mapContent"
+    },
+    "parentMapName": "WorthIt",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 2,
+    "tags": [
+      "Main",
+      "Solo",
+      "Medium",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Worth It",
+    "urls": {}
+  },
+  "WorthItALT": {
+    "artist": "Fifth Harmony feat. Kid Ink",
+    "assets": {
+      "nx": {},
+      "x1": {},
+      "common": {
+        "banner_bkgImageUrl": "",
+        "coach1ImageUrl": "",
+        "coverImageUrl": "",
+        "coverKidsImageUrl": "",
+        "coverKids_smallImageUrl": "",
+        "cover_1024ImageUrl": "",
+        "cover_smallImageUrl": "",
+        "expandBkgImageUrl": "",
+        "expandCoachImageUrl": "",
+        "map_bkgImageUrl": "",
+        "phoneCoach1ImageUrl": "",
+        "phoneCoverImageUrl": ""
+      }
+    },
+    "coachCount": 4,
+    "credits": "All Credits Goes to Fifth Harmony feat. Kid Ink",
+    "difficulty": 3,
+    "doubleScoringType": -1,
+    "jdmAttributes": [],
+    "lyricsColor": "FFFFFFFF",
+    "lyricsType": 0,
+    "mainCoach": -1,
+    "mapLength": 224,
+    "mapName": "WorthItALT",
+    "mode": 6,
+    "originalJDVersion": 2017,
+    "packages": {
+      "mapContent": "WorthItALT_mapContent"
+    },
+    "parentMapName": "WorthIt",
+    "skuIds": [
+      "jd2017-pc-ww"
+    ],
+    "status": 3,
+    "sweatDifficulty": 3,
+    "tags": [
+      "Alternate",
+      "Quartet",
+      "Hard",
+      "Pop",
+      "JustDance2017"
+    ],
+    "title": "Worth It (Alternate)",
+    "urls": {}
+  }
+}

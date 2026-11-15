@@ -63,9 +63,25 @@ function shuffleArray(array) {
   return shuffledArray.slice(0, 24);
 }
 
+const BASE_JD2017_MAPS = [
+  "AllAboutUs", "Bailar", "Bang", "Bicicleta", "Bonbon",
+  "CakeByTheOcean", "CakeByTheOceanALT", "CantFeelMyFace",
+  "CheapThrills", "CheapThrillsALT", "ColaSong", "ColaSongALT",
+  "Daddy", "DaddyALT", "DontStopMe", "DontStopMeALT",
+  "DragosteaDinTei", "ElTiki", "ElTikiALT", "GhostInTheKeys",
+  "Groove", "Hips", "HipsALT", "ILoveRock", "IntoYou",
+  "LastChristmas", "LeanOn", "LeanOnALT", "Leila", "LikeIWould",
+  "LittleSwing", "NaeNae", "NaeNaeALT", "Oishii", "PoPiPo",
+  "Radical", "RadicalALT", "RedMangoose", "RunTheNight", "Samba",
+  "ScreamNShout", "ScreamNShoutALT", "September", "SeptemberALT",
+  "SingleLadies", "Sorry", "SorryALT", "TeDominar", "TicoTico",
+  "Titanium", "WhatIsLove", "WhatIsLoveALT", "WhereverIGo",
+  "WorthIt", "WorthItALT"
+];
+
 function processPlaylists(playlists, type = "partyMap") {
   playlists.forEach(playlist => {
-    if (!playlist.name.startsWith(WEEKLY_PLAYLIST_PREFIX)) {
+    if (!playlist.name.startsWith(WEEKLY_PLAYLIST_PREFIX) && playlist.showOnCarousel !== false) {
       addCategories(generateCategories(`[icon:PLAYLIST]${playlist.name}`, playlist.songlist, type));
     }
   });
@@ -81,23 +97,73 @@ async function generateWeeklyRecommendedSong(playlists, type = "partyMap") {
 }
 
 function addJDVersion(songMapNames, type = "partyMap") {
-  addCategories(generateCategories("ABBA: You Can Dance", SongService.filterSongsByJDVersion(songMapNames, 4884), type));
-  addCategories(generateCategories("Just Dance Asia", SongService.filterSongsByJDVersion(songMapNames, 4514), type));
-  addCategories(generateCategories("Just Dance Kids", SongService.filterSongsByJDVersion(songMapNames, 123), type));
+  const abba = SongService.filterSongsByJDVersion(songMapNames, 4884);
+  if (abba.length > 0) addCategories(generateCategories("ABBA: You Can Dance", abba, type));
+
+  const asia = SongService.filterSongsByJDVersion(songMapNames, 4514);
+  if (asia.length > 0) addCategories(generateCategories("Just Dance Asia", asia, type));
+
+  const kids = SongService.filterSongsByJDVersion(songMapNames, 123);
+  if (kids.length > 0) addCategories(generateCategories("Just Dance Kids", kids, type));
+
   for (let year = 2069; year >= 2014; year--) {
-    addCategories(generateCategories(`Just Dance ${year}`, SongService.filterSongsByJDVersion(songMapNames, year), type));
+    const songs = SongService.filterSongsByJDVersion(songMapNames, year);
+    if (year === 2017) {
+      const jd2017Songs = [...new Set([...songs, ...BASE_JD2017_MAPS])];
+      const category = generateCategories("Just Dance 2017", jd2017Songs, type);
+      const offlineItems = [
+        {
+          __class: "Item",
+          actionList: type,
+          offlineRequest: {
+            __class: "JD_CarouselMapRequest",
+            actionListName: type,
+            actionListNameUpsell: "_None",
+            includedTags: ["Main"],
+            offline: true,
+            order: "title",
+            originalJDVersion: 2017,
+            uuid: "a161e320-c4b1-499b-9d5b-699cffe6e591"
+          }
+        },
+        {
+          __class: "Item",
+          actionList: type,
+          offlineRequest: {
+            __class: "JD_CarouselMapRequest",
+            actionListName: type,
+            actionListNameUpsell: "_None",
+            includedTags: ["Alternate"],
+            offline: true,
+            order: "title",
+            originalJDVersion: 2017,
+            uuid: "52eea4b2-dc5d-4649-b2c2-f838115f9264"
+          }
+        }
+      ];
+      category.items = [...offlineItems, ...category.items];
+      addCategories(category);
+    } else if (songs.length > 0) {
+      addCategories(generateCategories(`Just Dance ${year}`, songs, type));
+    }
   }
+
   for (let year = 4; year >= 1; year--) {
-    addCategories(generateCategories(`Just Dance ${year}`, SongService.filterSongsByJDVersion(songMapNames, year), type));
+    const songs = SongService.filterSongsByJDVersion(songMapNames, year);
+    if (songs.length > 0) {
+      addCategories(generateCategories(`Just Dance ${year}`, songs, type));
+    }
   }
-  addCategories(generateCategories("Unplayable Songs", SongService.filterSongsByJDVersion(songMapNames, 404)));
+
+  const unplayable = SongService.filterSongsByJDVersion(songMapNames, 404);
+  if (unplayable.length > 0) addCategories(generateCategories("Unplayable Songs", unplayable, type));
 }
 
 exports.generateCarousel = async (search, type = "partyMap", profileId = null) => {
   carousel = {};
   carousel = CloneObject(cClass.rootClass);
   carousel.actionLists = cClass.actionListsClass;
-  const allSongMapNames = SongService.getAllMapNames();
+  const allSongMapNames = [...new Set([...SongService.getAllMapNames(), ...BASE_JD2017_MAPS])];
 
   // Dynamic Carousel System
   addCategories(generateCategories(settings.server.modName, CloneObject(shuffleArray(allSongMapNames)), type)); // Shuffle main category

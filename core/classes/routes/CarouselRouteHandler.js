@@ -286,8 +286,10 @@ class CarouselRouteHandler extends RouteHandler {
 
         switch (req.params.mode) {
             case "party":
-            case "partycoop":
                 action = "partyMap";
+                break;
+            case "partycoop":
+                action = "partyMapCoop";
                 break;
             case "sweat":
                 action = "sweatMap";
