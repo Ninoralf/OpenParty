@@ -61,16 +61,66 @@ main.songdb = songdb.generateSonglist();
 if (main.items) {
   if (main.items.avatars) {
     for (const [id, item] of Object.entries(main.items.avatars)) {
-      if (item && item.Id === undefined) {
-        item.Id = parseInt(id, 10);
-      }
+      if (!item) continue;
+      const numId = parseInt(id, 10);
+      item.Id = numId;
+      item.id = numId;
+
+      const ver = item.jdVersion || item.JDNowVersion || item.JdVersion || 2017;
+      item.JdVersion = ver;
+      item.jdVersion = ver;
+      item.jdversion = ver;
+
+      item.Status = 1;
+      item.status = 1;
+
+      item.UnlockType = 0;
+      item.unlockType = 0;
+
+      const mojo = item.mojoPrice !== undefined ? item.mojoPrice : (item.MojoPrice !== undefined ? item.MojoPrice : 0);
+      item.MojoPrice = mojo;
+      item.mojoPrice = mojo;
+
+      item.itemType = 0;
+      item.ItemType = 0;
+
+      const sound = item.soundFamily || item.SoundFamily || "AVTR_Common_Girl_Hyper";
+      item.SoundFamily = sound;
+      item.soundFamily = sound;
+
+      const song = item.relativeSongName || item.RelativeSongName || "";
+      item.RelativeSongName = song;
+      item.relativeSongName = song;
+
+      const quest = item.relativeQuestID || item.RelativeQuestID || "";
+      item.RelativeQuestID = quest;
+      item.relativeQuestID = quest;
+
+      const boss = item.relativeWDFBossName || item.RelativeWDFBossName || "";
+      item.RelativeWDFBossName = boss;
+      item.relativeWDFBossName = boss;
     }
   }
   if (main.items.skins) {
     for (const [id, item] of Object.entries(main.items.skins)) {
-      if (item && item.Id === undefined) {
-        item.Id = parseInt(id, 10);
-      }
+      if (!item) continue;
+      const numId = parseInt(id, 10);
+      item.Id = numId;
+      item.id = numId;
+
+      const ver = item.jdVersion || item.JDNowVersion || item.JdVersion || 2017;
+      item.JdVersion = ver;
+      item.jdVersion = ver;
+      item.jdversion = ver;
+
+      item.Status = 1;
+      item.status = 1;
+
+      item.UnlockType = 0;
+      item.unlockType = 0;
+
+      item.itemType = 1;
+      item.ItemType = 1;
     }
   }
 }

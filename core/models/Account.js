@@ -227,6 +227,13 @@ class Account {
         delete publicData.password;
         delete publicData.ticket;
         publicData.isExisting = true;
+        publicData.avatar = Number(publicData.avatar) || 512;
+        publicData.skin = Number(publicData.skin) || 1;
+        publicData.alias = Number(publicData.alias) || 1;
+        publicData.portraitBorder = Number(publicData.portraitBorder) || 1;
+        publicData.country = publicData.country || "US";
+        publicData.name = publicData.name || publicData.nickname || "Ninoralf";
+        publicData.nickname = publicData.nickname || publicData.name || "Ninoralf";
         return publicData;
     }
 }

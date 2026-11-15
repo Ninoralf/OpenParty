@@ -15,8 +15,11 @@
             "jdVersion": 2017,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "c1712549-8b73-44d6-9c17-e3cac56d5590"
-          }
+            "uuid": "c1712549-8b73-44d6-9c17-e3cac56d5590",
+            "jdversion": 2017,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -34,8 +37,11 @@
             "jdVersion": 2022,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "99a0e5f8-61f9-48a7-aff4-a5884887b23d"
-          }
+            "uuid": "99a0e5f8-61f9-48a7-aff4-a5884887b23d",
+            "jdversion": 2022,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -53,8 +59,11 @@
             "jdVersion": 2021,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "e737f5e8-bd4a-4fe7-b035-389de576ff20"
-          }
+            "uuid": "e737f5e8-bd4a-4fe7-b035-389de576ff20",
+            "jdversion": 2021,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -72,8 +81,11 @@
             "jdVersion": 2020,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "bcea88b1-3dc3-4e06-8cee-feaf56480114"
-          }
+            "uuid": "bcea88b1-3dc3-4e06-8cee-feaf56480114",
+            "jdversion": 2020,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -91,8 +103,11 @@
             "jdVersion": 2019,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "bcea88b1-3dc3-4e06-8cee-feaf56480114"
-          }
+            "uuid": "bcea88b1-3dc3-4e06-8cee-feaf56480114",
+            "jdversion": 2019,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -110,8 +125,11 @@
             "jdVersion": 2018,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "1147833f-0634-45ee-a9bf-fbb05d20353b"
-          }
+            "uuid": "1147833f-0634-45ee-a9bf-fbb05d20353b",
+            "jdversion": 2018,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -129,8 +147,11 @@
             "jdVersion": 2016,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "33ba21de-94cb-435a-8f4c-95a11509baec"
-          }
+            "uuid": "33ba21de-94cb-435a-8f4c-95a11509baec",
+            "jdversion": 2016,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -148,8 +169,11 @@
             "jdVersion": 2015,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "0c5259c2-4146-44b8-8875-a9541c81abd6"
-          }
+            "uuid": "0c5259c2-4146-44b8-8875-a9541c81abd6",
+            "jdversion": 2015,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -167,8 +191,11 @@
             "jdVersion": 5,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "c0a08068-edf7-419f-b30a-5c1a7f3f107c"
-          }
+            "uuid": "c0a08068-edf7-419f-b30a-5c1a7f3f107c",
+            "jdversion": 5,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -186,8 +213,11 @@
             "jdVersion": 4,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "ddffcbe0-8a73-418a-9702-9fea97a10b0e"
-          }
+            "uuid": "ddffcbe0-8a73-418a-9702-9fea97a10b0e",
+            "jdversion": 4,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -205,8 +235,11 @@
             "jdVersion": 3,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "d660937f-0d2d-414a-a42c-365e66c308bd"
-          }
+            "uuid": "d660937f-0d2d-414a-a42c-365e66c308bd",
+            "jdversion": 3,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -224,8 +257,11 @@
             "jdVersion": 2,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "387d5eb9-9df3-4561-a32d-9a7406157c24"
-          }
+            "uuid": "387d5eb9-9df3-4561-a32d-9a7406157c24",
+            "jdversion": 2,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -243,8 +279,11 @@
             "jdVersion": 1,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "250d5f55-c963-4833-b0a4-3ddcf5a54b71"
-          }
+            "uuid": "250d5f55-c963-4833-b0a4-3ddcf5a54b71",
+            "jdversion": 1,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -262,8 +301,11 @@
             "jdVersion": 123,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "ba9fa20d-d995-4a4a-abec-9688d4782a61"
-          }
+            "uuid": "ba9fa20d-d995-4a4a-abec-9688d4782a61",
+            "jdversion": 123,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -281,8 +323,11 @@
             "jdVersion": 4884,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "84bb11f5-cdc3-49a6-a996-41020177fc09"
-          }
+            "uuid": "84bb11f5-cdc3-49a6-a996-41020177fc09",
+            "jdversion": 4884,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -300,8 +345,11 @@
             "jdVersion": -1,
             "lockType": 0,
             "sortBy": 1,
-            "uuid": "657232bf-d5f2-4553-b9d0-c1cf070c8e90"
-          }
+            "uuid": "657232bf-d5f2-4553-b9d0-c1cf070c8e90",
+            "jdversion": -1,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -319,8 +367,11 @@
             "jdVersion": 2017,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "9a3885fa-b5aa-4362-a6a9-3f0b5b7e9769"
-          }
+            "uuid": "9a3885fa-b5aa-4362-a6a9-3f0b5b7e9769",
+            "jdversion": 2017,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         },
         {
           "__class": "Item",
@@ -330,8 +381,11 @@
             "jdVersion": 9999,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "04942341-ee4a-4681-a583-9fecf7e2670f"
-          }
+            "uuid": "04942341-ee4a-4681-a583-9fecf7e2670f",
+            "jdversion": 9999,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -349,8 +403,11 @@
             "jdVersion": -1,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "ae334024-badd-47f1-8b3d-3a2af9607eb6"
-          }
+            "uuid": "ae334024-badd-47f1-8b3d-3a2af9607eb6",
+            "jdversion": -1,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -368,8 +425,11 @@
             "jdVersion": 2017,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "8ef22b56-d864-40e4-b061-001c3cdee05d"
-          }
+            "uuid": "8ef22b56-d864-40e4-b061-001c3cdee05d",
+            "jdversion": 2017,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         },
         {
           "__class": "Item",
@@ -379,8 +439,11 @@
             "jdVersion": 2017,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "9071654f-c131-418c-b785-5bc809d1403e"
-          }
+            "uuid": "9071654f-c131-418c-b785-5bc809d1403e",
+            "jdversion": 2017,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     },
@@ -398,12 +461,28 @@
             "jdVersion": 9999,
             "lockType": 0,
             "sortBy": 0,
-            "uuid": "db38fe17-7653-4b89-8e9c-d841a48ece38"
-          }
+            "uuid": "db38fe17-7653-4b89-8e9c-d841a48ece38",
+            "jdversion": 9999,
+            "unlockedOnly": false
+          },
+          "actionList": "SelectAvatarOffline"
         }
       ]
     }
   ],
-  "actionLists": {},
+  "actionLists": {
+    "SelectAvatarOffline": {
+      "__class": "ActionList",
+      "actions": [
+        {
+          "__class": "Action",
+          "bannerType": "dancer",
+          "title": "Select avatar",
+          "type": "select-avatar"
+        }
+      ],
+      "itemType": "avatar"
+    }
+  },
   "songItemLists": {}
 }

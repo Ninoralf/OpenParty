@@ -58,7 +58,7 @@ class CarouselRouteHandler extends RouteHandler {
         switch (path) {
             case 'avatars':
             case 'avatars-creation':
-                res.send(coreMain.avatars);
+                res.send(this.getAvatarsCarousel());
                 break;
             case 'dancerprofile':
             case 'friend-dancerprofile':
@@ -84,6 +84,63 @@ class CarouselRouteHandler extends RouteHandler {
     }
 
     /**
+     * Get avatars carousel structure with explicit items and normalized offlineRequest
+     * @returns {Object} Carousel content for avatars
+     */
+    getAvatarsCarousel() {
+        const avatarsData = JSON.parse(JSON.stringify(coreMain.avatars));
+        if (!avatarsData.actionLists) avatarsData.actionLists = {};
+        avatarsData.actionLists.SelectAvatarOffline = {
+            "__class": "ActionList",
+            "actions": [
+                {
+                    "__class": "Action",
+                    "bannerType": "dancer",
+                    "title": "Select avatar",
+                    "type": "select-avatar"
+                }
+            ],
+            "itemType": "avatar"
+        };
+
+        for (const cat of (avatarsData.categories || [])) {
+            for (const item of (cat.items || [])) {
+                if (item.offlineRequest) {
+                    const ver = item.offlineRequest.jdVersion || item.offlineRequest.jdversion || 2017;
+                    item.offlineRequest.jdversion = ver;
+                    item.offlineRequest.jdVersion = ver;
+                    item.offlineRequest.lockType = 0;
+                    item.offlineRequest.sortBy = item.offlineRequest.sortBy || 0;
+                    item.offlineRequest.itemType = 0;
+                    item.offlineRequest.unlockedOnly = false;
+                    item.actionList = "SelectAvatarOffline";
+                }
+            }
+        }
+
+        if (avatarsData.categories && avatarsData.categories.length > 0) {
+            const starterCategory = avatarsData.categories[0];
+            const starterIds = [512, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+            const explicitItems = starterIds.map(id => ({
+                "__class": "Item",
+                "act": "ui_component_base",
+                "isc": "grp_row",
+                "actionList": "SelectAvatarOffline",
+                "components": [
+                    {
+                        "__class": "JD_CarouselContentComponent_CustomizableItem",
+                        "itemId": id,
+                        "itemType": 0
+                    }
+                ]
+            }));
+            starterCategory.items = [...explicitItems, ...starterCategory.items];
+        }
+
+        return avatarsData;
+    }
+
+    /**
      * Get skins carousel structure
      * @returns {Object} Carousel content for skins
      */
@@ -99,19 +156,35 @@ class CarouselRouteHandler extends RouteHandler {
                     "items": [
                         {
                             "__class": "Item",
+                            "actionList": "SelectSkinOffline",
                             "offlineRequest": {
                                 "__class": "JD_CarouselCustomizableItemRequest",
                                 "itemType": 1,
                                 "jdVersion": 2017,
+                                "jdversion": 2017,
                                 "lockType": 0,
                                 "sortBy": 0,
+                                "unlockedOnly": false,
                                 "uuid": "4c45a707-1b03-4f24-9540-36a43924f469"
                             }
                         }
                     ]
                 }
             ],
-            "actionLists": {}
+            "actionLists": {
+                "SelectSkinOffline": {
+                    "__class": "ActionList",
+                    "actions": [
+                        {
+                            "__class": "Action",
+                            "bannerType": "dancer",
+                            "title": "Select skin",
+                            "type": "select-skin"
+                        }
+                    ],
+                    "itemType": "skin"
+                }
+            }
         };
     }
 
@@ -125,7 +198,7 @@ class CarouselRouteHandler extends RouteHandler {
         this.logger.info(`Handling carousel page request for mode: ${mode}`);
         
         if (mode === 'avatars' || mode === 'avatars-creation') {
-            return res.send(coreMain.avatars);
+            return res.send(this.getAvatarsCarousel());
         }
         if (mode === 'dancerprofile' || mode === 'friend-dancerprofile') {
             return res.send(coreMain.dancerprofile);

@@ -121,8 +121,19 @@ const path = require('path');
         // Item and customization routes
         this.registerGet(app, "/customizable-itemdb/v1/items", this.handleItems);
         this.registerPost(app, "/customizable-itemdb/v1/items", this.handleItems);
+        this.registerGet(app, "/customizable-itemdb/:version/items", this.handleItems);
+        this.registerPost(app, "/customizable-itemdb/:version/items", this.handleItems);
+        this.registerGet(app, "/customizable-itemdb/items", this.handleItems);
+        this.registerPost(app, "/customizable-itemdb/items", this.handleItems);
+        this.registerGet(app, "/items", this.handleItems);
+        this.registerPost(app, "/items", this.handleItems);
+
         this.registerGet(app, "/constant-provider/v1/sku-constants", this.handleSkuConstants);
         this.registerPost(app, "/constant-provider/v1/sku-constants", this.handleSkuConstants);
+        this.registerGet(app, "/constant-provider/:version/sku-constants", this.handleSkuConstants);
+        this.registerPost(app, "/constant-provider/:version/sku-constants", this.handleSkuConstants);
+        this.registerGet(app, "/sku-constants", this.handleSkuConstants);
+        this.registerPost(app, "/sku-constants", this.handleSkuConstants);
         this.registerGet(app, "/dance-machine/v1/blocks", this.handleDanceMachine);
 
         // Content authorization route
